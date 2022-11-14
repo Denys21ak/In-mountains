@@ -1,0 +1,285 @@
+
+
+
+/*Обнуление*/
+
+
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	margin: 0;
+	color: cornsilk;
+	background-color: #0B1B26;
+	background-image: url("./../img/bg/BG.jpg");
+	background-repeat: no-repeat;
+	line-height: 22px;
+	font-size: 18px;
+	font-family: 'Gilroy';
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+
+a{
+	color: white;
+}
+a:hover{
+	color: #FBD784;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Hurricane&family=Shizuru&display=swap');
+/*Container+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+[class*="container"]{
+	max-width: 1170px;
+	margin: 0 auto;
+	}
+	@media(max-width:1200px){
+		[class*="container"]{
+			max-width: 970px;
+			}
+	}
+	@media(max-width:990px){
+		[class*="container"]{
+			max-width: 526px;		}
+	}
+	@media(max-width:773px){
+		[class*="container"]{
+			max-width: min-content;
+			padding: 0 15px;
+		}
+	}
+
+/*Header*/
+.pdsf{
+	font-family: 'Dancing Script', cursive;
+
+	font-family: 'Hurricane', cursive;
+
+	font-family: 'Shizuru', cursive;
+}
+.r{
+	font-family: 'Marck Script', cursive;
+}
+.header {
+	max-width: 1170px;
+	margin: 0 auto;
+	padding: 64px 15px 198px 15px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.header__ul {
+	display: flex;
+}
+.header__ul li{
+	font-weight: bold;
+	margin-left: 40px;
+}
+.header__ul li:first-child{
+	margin-left: 0;
+}
+.header__user {
+	display: flex;
+	align-items:center;
+	justify-content: space-between;
+}
+.header__icons {
+	margin-right: 8px;
+}
+
+/*Hero*/
+
+
+
+.hero {
+	max-width: 950px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 968px;
+}
+.hero__before-title, .contant__text{
+	position: relative;
+	padding-left: 104px;
+	font-weight: 800;
+	letter-spacing: 6px;
+	text-transform: uppercase;
+	color: #FBD784;
+}
+.hero__before-title::before, .contant__text::before{
+	position: absolute;
+	left: 0;
+	top: 50%;
+	display: block;
+	content: '';
+	width: 72px;
+	height: 2px;
+	background: #FBD784;
+}
+.hero__title, .contant__title {
+	font-weight: 600;
+	font-size: 88px;
+	line-height: 100px;
+	text-transform: capitalize;
+}
+@media(max-width: 920px){
+	.hero__title, .hero__text, .contant__title{
+		font-size: 2.5rem;
+		line-height: 56px;
+	}
+}
+.title{
+	font-size: 64px;
+}
+.hero__title, .hero__text, .contant__scrall {
+	font-weight: bold;
+}
+.hero__title{
+	padding: 32px 0;
+}
+.hero__after, .contant__after{
+	display: flex;
+	align-items: center;
+}
+.hero__icon img{
+	margin-left: 16px;
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+
+/*Main*/
+
+
+.main, .footer{
+	max-width: 1050px;
+	margin: 0 auto;
+}
+.footer{
+	padding: 0 -229px 0 229px;
+	margin-bottom: 50px;
+}
+.contant{
+	display: flex;
+	align-items:center;
+	justify-content: space-between;
+	margin-bottom: 300px;
+}
+.contant:last-child{
+	margin-bottom: 200px;
+}
+
+/**/
+.contant__body{
+	position: relative;
+	padding-right: 34px;
+}
+.contant__body:nth-child(2){
+	padding-left: 34px;
+	padding-right: 0px;
+}
+.contant__body::before{
+	position: absolute;
+	left: -115px;
+	top: -102px;
+	display: block;
+	content: attr(data-number);
+	width: 240px;
+	height: 240px;
+	font-weight: 700;
+	font-size: 240px;
+	line-height: 240px;
+	color: #FFFFFF;
+	opacity: 0.06;
+}
+.two::before{
+	padding-left: 513px;
+}
+.contant__subscribe{
+	line-height: 32px;
+	margin: 27px 0;
+	max-width: 486px;
+}
+.contant__scrall{
+	color: #FBD784;
+}
+.contant__icon{
+	margin-left: 16px;
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));	
+	margin-top: 9px;
+}
+.contant__image>img{
+max-width: 509px;	
+/*	max-width: 100%;*/
+}
+/*footer*/
+
+
+.footer__flex, .footer__right{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.footer__logo img{
+	margin-bottom: 24px;
+}
+.footer__logo p{
+	display: block;
+	max-width: 303px;
+	font-size: 18px;
+	line-height: 32px;
+}
+.p-button {
+	display: block;
+	margin-top: 122px;
+	opacity: 0.5;
+}
+.footer__right {
+	min-width: 566px;
+}
+.footer__title {
+	font-size: 24px;
+	font-weight: bold;
+	line-height: 32px;
+	color: #FBD784;
+}
+.footer__ul ul{
+	margin-top: 24px;
+}
+.footer__ul ul>li{
+	margin-top: 16px;
+}
+
+/*Mobile*/
+@media(max-width: 920px){
+.header{
+	justify-content: center;
+}
+.contant {
+	flex-wrap: wrap;
+	justify-content: center;
+}
+}
