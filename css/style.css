@@ -1,9 +1,5 @@
 
-
-
 /*Обнуление*/
-
-
 *{
 	padding: 0;
 	margin: 0;
@@ -67,7 +63,7 @@ a:hover{
 	@media(max-width:773px){
 		[class*="container"]{
 			max-width: min-content;
-			padding: 0 15px;
+			padding: 0 40px;
 		}
 	}
 
@@ -118,9 +114,9 @@ a:hover{
 	max-width: 950px;
 	margin-right: auto;
 	margin-left: auto;
-	padding-left: 15px;
 	padding-right: 15px;
 	padding-bottom: 968px;
+	min-width: 584px;
 }
 .hero__before-title, .contant__text{
 	position: relative;
@@ -146,7 +142,7 @@ a:hover{
 	line-height: 100px;
 	text-transform: capitalize;
 }
-@media(max-width: 920px){
+@media(max-width: 1300px){
 	.hero__title, .hero__text, .contant__title{
 		font-size: 2.5rem;
 		line-height: 56px;
@@ -174,9 +170,13 @@ a:hover{
 /*Main*/
 
 
-.main, .footer{
+.main, .footer, .header, .hero{
 	max-width: 1050px;
 	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
 }
 .footer{
 	padding: 0 -229px 0 229px;
@@ -243,6 +243,10 @@ max-width: 509px;
 	justify-content: space-between;
 	flex-wrap: wrap;
 }
+.footer__logo{
+	padding-right: 14px;
+}
+
 .footer__logo img{
 	margin-bottom: 24px;
 }
@@ -274,12 +278,105 @@ max-width: 509px;
 }
 
 /*Mobile*/
-@media(max-width: 920px){
+@media(max-width: 773px){
 .header{
-	justify-content: center;
+	justify-content: space-between;
+	min-width: 573px;
 }
 .contant {
 	flex-wrap: wrap;
 	justify-content: center;
 }
+.contant__body {
+	padding-right: 0;
+	padding-bottom: 28px;
 }
+.contant__body::before {
+	left: -36px;
+	top: -125px;
+	font-size: 134px;
+}
+.contant__body:nth-child(2) {
+	padding-left: 0px;
+}
+.contant__subscribe {
+	max-width: 100%;
+}
+.hero {
+	padding-bottom: 660px;
+}
+
+.contant {
+	margin-top: -127px;
+}
+.two::before {
+	padding-left: 0px;
+}
+.footer__logo{
+		margin-top: -74px;
+		margin-bottom: 36px;
+}
+.p-button {
+	margin-top: 34px;
+}
+.footer__right {
+	min-width: 493px;
+}
+}
+/*For Ipad, big phone +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+@media (min-width: 773px) and (max-width: 1300px) {
+	.main, .footer, .header, .hero {
+		padding-left: 34px;
+		padding-right: 26px;
+  }
+.contant__body::before {
+	top: -162px;
+	left: -21px;
+	font-size: 114px;
+}
+.two::before {
+	/* padding-left: 513px; */
+	padding-left: 0px;
+	top: -150px;
+	left: 6px;
+}
+.contant {
+	margin-bottom: 80px;
+}
+.hero {
+	padding-bottom: 772px;
+}
+.hero__title {
+	font-size: 3.5rem;
+	line-height: 93px;
+}
+.contant__image>img {
+	max-width: 361px;
+}
+.p-button {
+	margin-top: 34px;
+}
+.footer__right {
+	margin-top: 32px;
+}
+
+}
+@media (min-width: 900px) and (max-width: 1300px) {
+	.contant__image>img {
+		max-width: 418px;
+	}
+}
+
+	/*For PC ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+	@media screen and (min-width: 773px) {
+		.second-foto-mob{
+			display: none;
+		}
+		
+	}
+	@media screen and (max-width: 773px) {
+		.second-foto{
+			display: none;
+		}
+	}
+	
